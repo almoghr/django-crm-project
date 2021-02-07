@@ -17,14 +17,12 @@
     </style>
   </head>
   <body>
-    <a href="/leads/create">Create a new lead</a>
+    <a href="/leads"> Go back to leads </a>
     <hr />
-    <h1>This is all of our leads</h1>
-    {% for lead in leads %}
+    <h1>This is the details of {{lead.first_name}}</h1>
     <div class="lead">
-      <a href="/leads/{{lead.pk}}"> {{lead.first_name}} {{lead.last_name}}</a>.
-      Age: {{lead.age}}
+      <p>This person's age is {{lead.age}}</p>
+      <p>The agent responsible for this particular lead is: {{lead.agent}}
     </div>
-    {% endfor %}
   </body>
 </html>
